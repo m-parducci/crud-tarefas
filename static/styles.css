@@ -1,0 +1,69 @@
+/* Centralizando o conteúdo do formulário */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo horizontalmente */
+    align-items: center;      /* Centraliza o conteúdo verticalmente */
+    margin: 5px;                /* Remove a margem padrão */
+    flex-direction: column;   /* Alinha o conteúdo (formulário e tabela) verticalmente */
+}
+
+/* Box que envolve todo o formulário */
+.form-container {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;  /* Largura do container */
+    max-width: 500px; /* Limita a largura máxima do container */
+    margin-bottom: 20px; /* Espaço entre o formulário e a tabela */
+}
+
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #d1d6e3;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align:
+        left;
+}
+
+th {
+    background-color: #7371b5;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    
+    <div class="form-container">
+        <h1>Adicionar Tarefa</h1>
+        <form action="/create" method="POST">
+            <label for="titulo">Título da Tarefa:</label>
+            <input type="text" name="titulo" required><br>
+    
+            <label for="descricao">Descrição da Tarefa:</label>
+            <input type="text" name="descricao" required><br>
+  
+            <input type="submit" value="Adicionar">
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if data %}
+            {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>
+                    <form action="/update" method="post" style="display: inline;">
+                        <input type="hidden" name="id" value="{{ row[0] }}">
+                        <input type="text" name="titulo" value="{{ row[1] }}">
+                        <input type="text" name="descricao" value="{{ row[2] }}">
+                        <input type="submit" value="Update">
+                    </form>
+                    <form action="/delete" method="post" style="display: inline;">
+                        <input type="hidden" name="id" value="{{ row[0] }}">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="4">Nenhuma tarefa encontrada.</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>
