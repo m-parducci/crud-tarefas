@@ -56,6 +56,6 @@ DATABASE_URL=sqlite:///db.sqlite3
 ``` 
 Execute:
 ```
-python crud.py
+python app.py
 ```
 O servidor Flask será iniciado e você poderá acessar o aplicativo no navegador, geralmente em http://127.0.0.1:5000/.
