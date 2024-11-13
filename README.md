@@ -26,6 +26,7 @@ cd crud-tarefas
 python -m venv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt
+```
 
 Configure as variáveis de ambiente:
 Crie um arquivo .env na raiz do projeto e adicione suas variáveis de ambiente (como configurações do banco de dados, chaves secretas, etc.).
