@@ -28,13 +28,34 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-Configure as variáveis de ambiente:
-Crie um arquivo .env na raiz do projeto e adicione suas variáveis de ambiente (como configurações do banco de dados, chaves secretas, etc.).
+2. Crie um ambiente virtual:
+Se você ainda não tem um ambiente virtual configurado, crie um utilizando o seguinte comando:
+```
+python -m venv venv
+```
+3. Ative o ambiente virtual:
+- Windows
+  ```
+  .\venv\Scripts\activate
+  ```
+- Mac/Linux:
+```
+source venv/bin/activate
 
+```
+4. Instale as dependências:
+```
+pip install -r requirements.txt
+
+``` 
+Configure as variáveis de ambiente:
+Crie um arquivo .env na raiz do projeto e adicione suas variáveis de ambiente (como configurações do banco de dados, chaves secretas, etc.). Exemplo:
+``` 
 SECRET_KEY=seu_valor_secreto
 DATABASE_URL=sqlite:///db.sqlite3
-
+``` 
 Execute:
+```
 python crud.py
-
+```
 O servidor Flask será iniciado e você poderá acessar o aplicativo no navegador, geralmente em http://127.0.0.1:5000/.
