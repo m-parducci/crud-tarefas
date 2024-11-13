@@ -1,6 +1,6 @@
 # CRUD de Tarefas
 
-Este projeto é um sistema simples de CRUD (Create, Read, Update, Delete) para gerenciamento de tarefas. Ele permite que o usuário adicione, visualize, edite e exclua tarefas. O sistema foi desenvolvido utilizando Python (Flask), HTML e CSS para o front-end.
+Este projeto é um sistema simples de CRUD (Create, Read, Update, Delete) para gerenciamento de tarefas. Ele permite que o usuário adicione, visualize, edite e exclua tarefas. O sistema foi desenvolvido utilizando Python (Flask), PostgreeSQL, HTML e CSS para o front-end.
 
 ## Funcionalidades
 
